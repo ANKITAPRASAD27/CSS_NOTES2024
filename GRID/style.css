@@ -1,0 +1,65 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+h1{
+    font-style: bold;
+    font-weight: 500px;
+    text-align: center;
+}
+.container
+{
+    display: grid;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.5fr 1.3fr 0.8fr;
+    grid-template-areas: "NAVBAR NAVBAR NAVBAR NAVBAR" "sidebar main main main" "sidebar box1 box2 box3" "sidebar footer footer footer";
+    grid-gap: 0.5rem;
+    font-size: larger;
+}
+nav{
+    background-color: chartreuse;
+    grid-area:NAVBAR;
+}
+main
+{
+    background-color: cornflowerblue;
+    grid-area:main;
+
+}
+.sidebar
+{
+    background-color: teal;
+    grid-area: sidebar;
+}
+.box1
+{
+    background-color: darkorange;
+    grid-area: box1;
+}
+.box2
+{
+    background-color: dodgerblue;
+    grid-area: box2;
+}
+.box3
+{
+    background-color: rgb(34, 131, 163);
+    grid-area: box3;
+}
+footer{
+    background-color: slateblue;
+    grid-area: footer;
+}
+@media only screen and (max-width:640px)
+ {
+    .container{
+        grid-template-columns: 1fr ;
+        grid-template-rows: 0.2fr 2fr 0.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: "navbar" "main" "sidebar" "box1" "box2" "box3" "footer";
+    }
+}
